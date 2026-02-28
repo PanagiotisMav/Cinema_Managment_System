@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.cinema.controller.SeatSelectionController"
+            styleClass="main-background">
+    
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header-bar">
+            <padding>
+                <Insets top="15" right="30" bottom="15" left="30"/>
+            </padding>
+            
+            <!-- Back Button -->
+            <Button text="← Back" onAction="#handleBack" styleClass="btn-back"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Movie Info -->
+            <VBox alignment="CENTER">
+                <Label fx:id="movieTitleLabel" text="Movie Title" styleClass="header-movie-title"/>
+                <Label fx:id="screeningInfoLabel" text="Date | Time | Hall" styleClass="header-screening-info"/>
+            </VBox>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Price Info -->
+            <VBox alignment="CENTER_RIGHT">
+                <Label fx:id="selectedSeatsLabel" text="Selected: 0 seats" styleClass="selected-seats-label"/>
+                <Label fx:id="totalPriceLabel" text="Total: $0.00" styleClass="total-price-label"/>
+            </VBox>
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox alignment="CENTER" spacing="30">
+            <padding>
+                <Insets top="30" right="50" bottom="30" left="50"/>
+            </padding>
+            
+            <!-- Seat Legend -->
+            <HBox alignment="CENTER" spacing="30">
+                <HBox alignment="CENTER" spacing="8">
+                    <Rectangle width="25" height="25" styleClass="seat-available" arcWidth="5" arcHeight="5"/>
+                    <Label text="Available" styleClass="legend-label"/>
+                </HBox>
+                <HBox alignment="CENTER" spacing="8">
+                    <Rectangle width="25" height="25" styleClass="seat-selected" arcWidth="5" arcHeight="5"/>
+                    <Label text="Selected" styleClass="legend-label"/>
+                </HBox>
+                <HBox alignment="CENTER" spacing="8">
+                    <Rectangle width="25" height="25" styleClass="seat-reserved" arcWidth="5" arcHeight="5"/>
+                    <Label text="Reserved" styleClass="legend-label"/>
+                </HBox>
+            </HBox>
+            
+            <!-- Seats Grid Container -->
+            <VBox alignment="CENTER" spacing="15" styleClass="seats-container">
+                <padding>
+                    <Insets top="30" right="40" bottom="30" left="40"/>
+                </padding>
+                
+                <!-- Row Labels and Seats -->
+                <GridPane fx:id="seatsGrid" hgap="8" vgap="8" alignment="CENTER"/>
+                
+                <!-- Screen -->
+                <Region prefHeight="20"/>
+                <StackPane styleClass="screen-container">
+                    <Rectangle width="400" height="30" styleClass="screen-shape" arcWidth="5" arcHeight="5"/>
+                    <Label text="SCREEN" styleClass="screen-label"/>
+                </StackPane>
+            </VBox>
+            
+            <!-- Reserve Button -->
+            <Button fx:id="reserveButton" text="book my seats" onAction="#handleReserve" 
+                    styleClass="btn-reserve" disable="true"/>
+        </VBox>
+    </center>
+</BorderPane>

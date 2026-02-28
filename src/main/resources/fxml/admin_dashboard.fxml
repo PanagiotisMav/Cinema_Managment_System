@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.cinema.controller.AdminDashboardController"
+            styleClass="main-background" stylesheets="@../styles/style.css">
+    
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="header-bar">
+            <padding>
+                <Insets top="15" right="30" bottom="15" left="30"/>
+            </padding>
+            
+            <!-- Back/Logout Button -->
+            <Button text="← Back" onAction="#handleLogout" styleClass="btn-back"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Title -->
+            <Label text="Admin Dashboard" styleClass="header-movie-title"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <Region prefWidth="30"/>
+        </HBox>
+    </top>
+    
+    <center>
+        <HBox alignment="CENTER" spacing="50">
+            <padding>
+                <Insets top="50" right="50" bottom="50" left="50"/>
+            </padding>
+            
+            <!-- Manage Users Card -->
+            <VBox alignment="CENTER" spacing="15" styleClass="admin-card" onMouseClicked="#handleManageUsers">
+                <padding>
+                    <Insets top="30" right="40" bottom="30" left="40"/>
+                </padding>
+                
+                <StackPane prefWidth="120" prefHeight="120">
+                    <Rectangle width="120" height="120" arcWidth="15" arcHeight="15" styleClass="admin-card-icon-bg"/>
+                    <Label text="👥" style="-fx-font-size: 48px;"/>
+                </StackPane>
+                
+                <Label text="Manage Users" styleClass="admin-card-title"/>
+            </VBox>
+            
+            <!-- Manage Films Card -->
+            <VBox alignment="CENTER" spacing="15" styleClass="admin-card" onMouseClicked="#handleManageFilms">
+                <padding>
+                    <Insets top="30" right="40" bottom="30" left="40"/>
+                </padding>
+                
+                <StackPane prefWidth="120" prefHeight="120">
+                    <Rectangle width="120" height="120" arcWidth="15" arcHeight="15" styleClass="admin-card-icon-bg"/>
+                    <Label text="🎬" style="-fx-font-size: 48px;"/>
+                </StackPane>
+                
+                <Label text="Manage Films" styleClass="admin-card-title"/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

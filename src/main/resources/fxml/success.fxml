@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.cinema.controller.SuccessController"
+            styleClass="main-background" stylesheets="@../styles/style.css">
+    
+    <center>
+        <VBox alignment="CENTER" spacing="30">
+            <padding>
+                <Insets top="50" right="50" bottom="50" left="50"/>
+            </padding>
+            
+            <!-- Success Icon -->
+            <StackPane>
+                <Circle radius="60" styleClass="success-circle"/>
+                <Label text="✓" styleClass="success-checkmark"/>
+            </StackPane>
+            
+            <!-- Success Message -->
+            <Label text="Your order has been completed" styleClass="success-title"/>
+            <Label text="successfully" styleClass="success-title"/>
+            
+            <!-- Ticket Details -->
+            <VBox alignment="CENTER" spacing="10" styleClass="ticket-details-box">
+                <padding>
+                    <Insets top="20" right="30" bottom="20" left="30"/>
+                </padding>
+                
+                <Label fx:id="movieNameLabel" text="Movie Name" styleClass="ticket-detail-movie"/>
+                <Label fx:id="dateTimeLabel" text="Date | Time" styleClass="ticket-detail-info"/>
+                <Label fx:id="seatsLabel" text="Seats: A1, A2" styleClass="ticket-detail-info"/>
+                <Label fx:id="customerLabel" text="Customer: John Doe" styleClass="ticket-detail-info"/>
+                <Label fx:id="priceLabel" text="Total: $25.00" styleClass="ticket-detail-price"/>
+            </VBox>
+            
+            <!-- Return Button -->
+            <Button text="Return Back" onAction="#handleReturn" styleClass="btn-return"/>
+        </VBox>
+    </center>
+</BorderPane>

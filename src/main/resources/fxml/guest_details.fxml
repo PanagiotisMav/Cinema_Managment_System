@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.cinema.controller.GuestDetailsController"
+            styleClass="main-background" stylesheets="@../styles/style.css">
+    
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header-bar">
+            <padding>
+                <Insets top="15" right="30" bottom="15" left="30"/>
+            </padding>
+            
+            <!-- Back Button -->
+            <Button text="← Back" onAction="#handleBack" styleClass="btn-back"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Movie Info -->
+            <VBox alignment="CENTER">
+                <Label fx:id="movieTitleLabel" text="Movie Title" styleClass="header-movie-title"/>
+                <Label fx:id="screeningInfoLabel" text="Date | Time | Hall" styleClass="header-screening-info"/>
+            </VBox>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Seats Info -->
+            <VBox alignment="CENTER_RIGHT">
+                <Label fx:id="selectedSeatsLabel" text="Selected: 0 seats" styleClass="selected-seats-label"/>
+                <Label fx:id="totalPriceLabel" text="Total: $0.00" styleClass="total-price-label"/>
+            </VBox>
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <!-- Form Container -->
+            <VBox alignment="CENTER" spacing="15" styleClass="login-box" maxWidth="320.0" minWidth="280.0">
+                <padding>
+                    <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                </padding>
+                
+                <!-- Email Field -->
+                <TextField fx:id="emailField" promptText="Email" styleClass="text-field-custom" prefHeight="38.0" maxWidth="260.0" />
+                
+                <!-- First Name Field -->
+                <TextField fx:id="firstNameField" promptText="First Name" styleClass="text-field-custom" prefHeight="38.0" maxWidth="260.0" />
+                
+                <!-- Last Name Field -->
+                <TextField fx:id="lastNameField" promptText="Last Name" styleClass="text-field-custom" prefHeight="38.0" maxWidth="260.0" />
+                
+                <!-- Phone Field -->
+                <TextField fx:id="phoneField" promptText="Phone" styleClass="text-field-custom" prefHeight="38.0" maxWidth="260.0" />
+                
+                <!-- Error Label -->
+                <Label fx:id="errorLabel" styleClass="error-label" />
+                
+                <!-- Continue Button -->
+                <Button fx:id="continueButton" onAction="#handleContinue" prefHeight="38.0" prefWidth="180.0" styleClass="btn-primary" text="continue" />
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

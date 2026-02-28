@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.cinema.controller.SignUpController"
+            styleClass="main-background">
+    
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <!-- Back Button -->
+            <HBox alignment="CENTER_LEFT" maxWidth="400">
+                <Button text="← Back" onAction="#handleBack" styleClass="btn-back"/>
+            </HBox>
+            
+            <VBox alignment="CENTER" spacing="12" styleClass="login-box" maxWidth="400">
+                <padding>
+                    <Insets top="30" right="40" bottom="30" left="40"/>
+                </padding>
+                
+                <!-- Title -->
+                <Label text="Create Account" styleClass="form-title"/>
+                
+                <Region prefHeight="5"/>
+                
+                <!-- Email Field -->
+                <VBox spacing="3" alignment="CENTER_LEFT">
+                    <Label text="Email" styleClass="field-label"/>
+                    <TextField fx:id="emailField" promptText="Enter your email" styleClass="text-field-custom"/>
+                </VBox>
+                
+                <!-- First Name Field -->
+                <VBox spacing="3" alignment="CENTER_LEFT">
+                    <Label text="First Name" styleClass="field-label"/>
+                    <TextField fx:id="firstNameField" promptText="Enter your first name" styleClass="text-field-custom"/>
+                </VBox>
+                
+                <!-- Last Name Field -->
+                <VBox spacing="3" alignment="CENTER_LEFT">
+                    <Label text="Last Name" styleClass="field-label"/>
+                    <TextField fx:id="lastNameField" promptText="Enter your last name" styleClass="text-field-custom"/>
+                </VBox>
+                
+                <!-- Phone Number Field -->
+                <VBox spacing="3" alignment="CENTER_LEFT">
+                    <Label text="Phone Number" styleClass="field-label"/>
+                    <TextField fx:id="phoneField" promptText="Enter your phone number" styleClass="text-field-custom"/>
+                </VBox>
+                
+                <!-- Password Field -->
+                <VBox spacing="3" alignment="CENTER_LEFT">
+                    <Label text="Password" styleClass="field-label"/>
+                    <StackPane>
+                        <PasswordField fx:id="passwordField" promptText="Enter your password (min 6 characters)" styleClass="text-field-custom"/>
+                        <TextField fx:id="passwordTextField" promptText="Enter your password (min 6 characters)" styleClass="text-field-custom" visible="false" managed="false"/>
+                        <HBox alignment="CENTER_RIGHT" pickOnBounds="false">
+                            <padding>
+                                <Insets right="10"/>
+                            </padding>
+                            <Button fx:id="togglePasswordBtn" text="Show" onAction="#togglePasswordVisibility" styleClass="password-toggle"/>
+                        </HBox>
+                    </StackPane>
+                </VBox>
+                
+                <!-- Confirm Password Field -->
+                <VBox spacing="3" alignment="CENTER_LEFT">
+                    <Label text="Confirm Password" styleClass="field-label"/>
+                    <StackPane>
+                        <PasswordField fx:id="confirmPasswordField" promptText="Confirm your password" styleClass="text-field-custom"/>
+                        <TextField fx:id="confirmPasswordTextField" promptText="Confirm your password" styleClass="text-field-custom" visible="false" managed="false"/>
+                        <HBox alignment="CENTER_RIGHT" pickOnBounds="false">
+                            <padding>
+                                <Insets right="10"/>
+                            </padding>
+                            <Button fx:id="toggleConfirmPasswordBtn" text="Show" onAction="#toggleConfirmPasswordVisibility" styleClass="password-toggle"/>
+                        </HBox>
+                    </StackPane>
+                </VBox>
+                
+                <!-- Error Label -->
+                <Label fx:id="errorLabel" styleClass="error-label" wrapText="true"/>
+                
+                <Region prefHeight="5"/>
+                
+                <!-- Create Account Button -->
+                <Button text="create account" onAction="#handleCreateAccount" styleClass="btn-primary" maxWidth="Infinity"/>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
