@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.cinema.controller.AdminUserManagementController"
+            styleClass="main-background" stylesheets="@../styles/style.css">
+    
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="header-bar">
+            <padding>
+                <Insets top="15" right="30" bottom="15" left="30"/>
+            </padding>
+            
+            <!-- Back Button -->
+            <Button text="← Back" onAction="#handleBack" styleClass="btn-back"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Title -->
+            <Label text="User Management" styleClass="header-movie-title"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <Region prefWidth="30"/>
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="30" right="50" bottom="30" left="50"/>
+            </padding>
+            
+            <!-- Users Table -->
+            <TableView fx:id="usersTable" prefHeight="400" prefWidth="700" styleClass="users-table">
+                <columns>
+                    <TableColumn fx:id="roleColumn" text="Role" prefWidth="80"/>
+                    <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="120"/>
+                    <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="120"/>
+                    <TableColumn fx:id="emailColumn" text="Gmail" prefWidth="200"/>
+                    <TableColumn fx:id="phoneColumn" text="Phone Number" prefWidth="130"/>
+                    <TableColumn fx:id="deleteColumn" text="" prefWidth="50"/>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+            </TableView>
+            
+            <!-- Add User Button -->
+            <Button text="Add User" onAction="#handleAddUser" styleClass="btn-primary" prefWidth="150" prefHeight="40"/>
+        </VBox>
+    </center>
+</BorderPane>
