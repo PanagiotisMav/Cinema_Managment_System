@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.cinema.controller.CashierMovieSelectionController"
+            styleClass="main-background">
+    
+    <top>
+        <HBox alignment="CENTER" spacing="20" styleClass="header-bar">
+            <padding>
+                <Insets top="15" right="30" bottom="15" left="30"/>
+            </padding>
+            
+            <!-- Back/Logout Button -->
+            <Button fx:id="backButton" text="← Logout" onAction="#handleLogout" styleClass="btn-back"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Date Selection -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="Select Date:" styleClass="header-label"/>
+                <DatePicker fx:id="datePicker" styleClass="date-picker-custom"/>
+            </HBox>
+            
+            <!-- Search Button -->
+            <Button text="SEARCH" onAction="#handleSearch" styleClass="btn-search"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Add Movie Button (instead of ticket icon) -->
+            <Button text="+ Add Movie" onAction="#handleAddMovie" styleClass="btn-add-movie"/>
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20">
+            <padding>
+                <Insets top="30" right="50" bottom="30" left="50"/>
+            </padding>
+            
+            <!-- Title with Cashier indicator -->
+            <HBox alignment="CENTER" spacing="20">
+                <Label text="Now Showing" styleClass="section-title"/>
+                <Label text="(Cashier Mode)" styleClass="cashier-mode-label"/>
+            </HBox>
+            
+            <!-- Movies Grid -->
+            <ScrollPane fitToWidth="true" styleClass="movies-scroll-pane" VBox.vgrow="ALWAYS">
+                <FlowPane fx:id="moviesFlowPane" hgap="30" vgap="30" alignment="CENTER">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                </FlowPane>
+            </ScrollPane>
+            
+            <!-- No Movies Label -->
+            <Label fx:id="noMoviesLabel" text="No screenings available for this date. Please select another date." 
+                   styleClass="no-movies-label" visible="false" managed="false"/>
+        </VBox>
+    </center>
+</BorderPane>

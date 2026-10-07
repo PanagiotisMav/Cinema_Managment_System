@@ -1,0 +1,972 @@
+/* 
+ * Cinema Management System - Main Stylesheet
+ * Theme: Dark blue with red accents (matching Figma design)
+ */
+
+/* ==================== Global Styles ==================== */
+
+.main-background {
+    -fx-background-color: #2d3e50;
+}
+
+/* ==================== Typography ==================== */
+
+.app-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.form-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.section-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.field-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #b0b0b0;
+}
+
+.error-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #ff6b6b;
+    -fx-padding: 5 0 0 0;
+}
+
+.separator-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #808080;
+}
+
+/* ==================== Login/Signup Box ==================== */
+
+.login-box {
+    -fx-background-color: #1a2634;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 5);
+}
+
+/* ==================== Text Fields ==================== */
+
+.text-field-custom {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-padding: 10 12;
+    -fx-font-size: 14px;
+    -fx-pref-height: 38px;
+}
+
+.text-field-custom:focused {
+    -fx-background-color: white;
+    -fx-border-color: #e74c3c;
+    -fx-border-radius: 5;
+    -fx-border-width: 2;
+}
+
+/* ==================== Buttons ==================== */
+
+.btn-primary {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #c0392b;
+}
+
+.btn-primary:pressed {
+    -fx-background-color: #a93226;
+}
+
+.btn-secondary {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #219a52;
+}
+
+.btn-guest {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 8 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-guest:hover {
+    -fx-background-color: #2980b9;
+}
+
+.btn-back {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 5 10;
+}
+
+.btn-back:hover {
+    -fx-text-fill: #e74c3c;
+}
+
+.btn-search {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 25;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-search:hover {
+    -fx-background-color: #c0392b;
+}
+
+.btn-time {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-padding: 5 10;
+    -fx-background-radius: 3;
+    -fx-cursor: hand;
+}
+
+.btn-time:hover {
+    -fx-background-color: #e74c3c;
+}
+
+.btn-reserve {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 40;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-reserve:hover {
+    -fx-background-color: #c0392b;
+}
+
+.btn-reserve:disabled {
+    -fx-background-color: #7f8c8d;
+    -fx-cursor: default;
+}
+
+.btn-return {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-return:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* ==================== Header Bar ==================== */
+
+.header-bar {
+    -fx-background-color: #1a2634;
+}
+
+.header-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.header-movie-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.header-screening-info {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 12px;
+}
+
+/* ==================== Date Picker ==================== */
+
+.date-picker-custom {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}
+
+.date-picker-custom .arrow-button {
+    -fx-background-color: white;
+}
+
+/* ==================== Ticket Icon ==================== */
+
+.ticket-icon-container {
+    -fx-cursor: hand;
+    -fx-padding: 5 10;
+    -fx-background-color: #f39c12;
+    -fx-background-radius: 5;
+}
+
+.ticket-icon-container:hover {
+    -fx-background-color: #e67e22;
+}
+
+.ticket-icon {
+    -fx-font-size: 24px;
+}
+
+.ticket-count-label {
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+}
+
+/* ==================== Movie Cards ==================== */
+
+.movies-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.movies-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.movie-card {
+    -fx-background-color: #1a2634;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+}
+
+.movie-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 15, 0, 0, 3);
+}
+
+.poster-container {
+    -fx-background-radius: 5;
+}
+
+.movie-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+.movie-info {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 12px;
+}
+
+.screenings-title {
+    -fx-text-fill: #f39c12;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.no-movies-label {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 16px;
+}
+
+/* ==================== Seat Selection ==================== */
+
+.seats-container {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+}
+
+.selected-seats-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.total-price-label {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.row-label {
+    -fx-text-fill: #2d3e50;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.seat-button-available {
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 5;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5;
+    -fx-text-fill: #2d3e50;
+    -fx-font-size: 10px;
+    -fx-cursor: hand;
+}
+
+.seat-button-available:hover {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-border-color: #2980b9;
+}
+
+.seat-button-selected {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #219a52;
+    -fx-border-radius: 5;
+    -fx-font-size: 10px;
+    -fx-cursor: hand;
+}
+
+.seat-button-reserved {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: #7f8c8d;
+    -fx-background-radius: 5;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 5;
+    -fx-font-size: 10px;
+}
+
+/* Seat Legend */
+.seat-available {
+    -fx-fill: #ecf0f1;
+    -fx-stroke: #bdc3c7;
+}
+
+.seat-selected {
+    -fx-fill: #27ae60;
+    -fx-stroke: #219a52;
+}
+
+.seat-reserved {
+    -fx-fill: #95a5a6;
+    -fx-stroke: #7f8c8d;
+}
+
+.legend-label {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+/* Screen */
+.screen-container {
+    -fx-padding: 10;
+}
+
+.screen-shape {
+    -fx-fill: #34495e;
+}
+
+.screen-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ==================== Success Screen ==================== */
+
+.success-circle {
+    -fx-fill: transparent;
+    -fx-stroke: #27ae60;
+    -fx-stroke-width: 4;
+}
+
+.success-checkmark {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+}
+
+.success-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.ticket-details-box {
+    -fx-background-color: #1a2634;
+    -fx-background-radius: 10;
+}
+
+.ticket-detail-movie {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.ticket-detail-info {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 14px;
+}
+
+.ticket-detail-price {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* ==================== Ticket Popup ==================== */
+
+.ticket-popup {
+    -fx-background-color: #1a2634;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 5);
+}
+
+.popup-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.ticket-section-label {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 14px;
+}
+
+.no-tickets-label {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 12px;
+}
+
+.ticket-list-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.ticket-list-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.ticket-item {
+    -fx-background-color: #2d3e50;
+    -fx-background-radius: 5;
+}
+
+.ticket-movie-name {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.ticket-details {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 11px;
+}
+
+.ticket-used {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 11px;
+}
+
+.ticket-unused {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 11px;
+}
+
+/* ==================== Dialog Styles ==================== */
+
+.custom-dialog {
+    -fx-background-color: #2d3e50;
+}
+
+.custom-dialog .dialog-pane {
+    -fx-background-color: #2d3e50;
+}
+
+.custom-dialog .dialog-pane > .content {
+    -fx-background-color: #2d3e50;
+}
+
+/* ==================== Scrollbar Styles ==================== */
+
+.scroll-pane .scroll-bar:vertical,
+.scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb,
+.scroll-pane .scroll-bar:horizontal .thumb {
+    -fx-background-color: #4a6278;
+    -fx-background-radius: 5;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb:hover,
+.scroll-pane .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #5a7288;
+}
+
+.scroll-pane .scroll-bar .increment-button,
+.scroll-pane .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-pane .scroll-bar .increment-arrow,
+.scroll-pane .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+/* ==================== Separator ==================== */
+
+.separator .line {
+    -fx-border-color: #4a6278;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* ==================== Cashier Specific Styles ==================== */
+
+.cashier-mode-label {
+    -fx-text-fill: #f39c12;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+.btn-add-movie {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-add-movie:hover {
+    -fx-background-color: #219a52;
+}
+
+.btn-delete {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-padding: 6 12;
+    -fx-background-radius: 3;
+    -fx-cursor: hand;
+}
+
+.btn-delete:hover {
+    -fx-background-color: #a93226;
+}
+
+/* ==================== Add Movie Form ==================== */
+
+.add-movie-form {
+    -fx-background-color: #1a2634;
+    -fx-background-radius: 10;
+}
+
+.image-upload-container {
+    -fx-cursor: hand;
+}
+
+.image-placeholder {
+    -fx-fill: #2a2a2a;
+    -fx-stroke: #4a6278;
+    -fx-stroke-width: 2;
+    -fx-stroke-dash-array: 10 5;
+}
+
+.upload-hint {
+    -fx-text-fill: #808080;
+    -fx-font-size: 12px;
+}
+
+.image-path-label {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 11px;
+}
+
+.combo-box-custom {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}
+
+.time-separator {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.form-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.form-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ==================== Reservations Panel ==================== */
+
+.reservations-panel {
+    -fx-background-color: #1a2634;
+    -fx-background-radius: 10;
+}
+
+.reservations-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.reservations-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.reservations-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.reservation-card {
+    -fx-background-color: #2d3e50;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.reservation-card:hover {
+    -fx-background-color: #3d4e60;
+}
+
+.reservation-customer {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.reservation-seats {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 12px;
+}
+
+.reservation-price {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.no-reservations-label {
+    -fx-text-fill: #808080;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+.btn-change {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-change:hover {
+    -fx-background-color: #2980b9;
+}
+
+.btn-change:disabled {
+    -fx-background-color: #7f8c8d;
+}
+
+.btn-cancel {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-cancel:hover {
+    -fx-background-color: #c0392b;
+}
+
+.btn-cancel:disabled {
+    -fx-background-color: #7f8c8d;
+}
+
+/* ==================== Change Ticket Screen ==================== */
+
+.section-subtitle {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.original-ticket-info {
+    -fx-text-fill: #f39c12;
+    -fx-font-size: 12px;
+}
+
+.screenings-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.screenings-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.screening-card {
+    -fx-background-color: #1a2634;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.screening-card:hover {
+    -fx-background-color: #2a3644;
+}
+
+.screening-movie-title {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.screening-info {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 12px;
+}
+
+.screening-available {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 11px;
+}
+
+.seats-container-small {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+}
+
+.row-label-small {
+    -fx-text-fill: #2d3e50;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.legend-label-small {
+    -fx-text-fill: #2d3e50;
+    -fx-font-size: 10px;
+}
+
+.screen-label-small {
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+}
+
+.success-info {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 14px;
+}
+
+/* ==================== Back Button (Circle) ==================== */
+
+.back-button {
+    -fx-fill: #34495e;
+    -fx-cursor: hand;
+}
+
+.back-button:hover {
+    -fx-fill: #e74c3c;
+}
+
+.back-button-circle {
+    -fx-fill: #34495e;
+    -fx-cursor: hand;
+}
+
+.back-button-circle:hover {
+    -fx-fill: #e74c3c;
+}
+
+/* ==================== Admin Dashboard ==================== */
+
+.admin-card {
+    -fx-background-color: #e74c3c;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 5);
+}
+
+.admin-card:hover {
+    -fx-background-color: #c0392b;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0, 0, 8);
+}
+
+.admin-card-icon-bg {
+    -fx-fill: rgba(0, 0, 0, 0.2);
+}
+
+.admin-card-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* ==================== User Management Table ==================== */
+
+.users-table {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+
+.users-table .column-header {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10;
+}
+
+.users-table .column-header .label {
+    -fx-text-fill: #2d3e50;
+    -fx-font-weight: bold;
+}
+
+.users-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #ecf0f1;
+    -fx-border-width: 0 0 1 0;
+}
+
+.users-table .table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.users-table .table-row-cell:selected {
+    -fx-background-color: #d5e8f7;
+}
+
+.users-table .table-cell {
+    -fx-text-fill: #2d3e50;
+    -fx-padding: 8;
+}
+
+.delete-button-small {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 5;
+}
+
+.delete-button-small:hover {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-background-radius: 3;
+}
+
+/* ==================== Role Toggle Buttons ==================== */
+
+.role-toggle {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 8 16;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.role-toggle:selected {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+.role-toggle:hover {
+    -fx-background-color: #3d566e;
+}
+
+.role-toggle:selected:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* ==================== Secondary and Danger Buttons ==================== */
+
+.btn-secondary {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 25;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #2c3e50;
+}
+
+.btn-danger {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 25;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* ==================== Green Signup Button ==================== */
+
+.btn-signup {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 12 30;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.btn-signup:hover {
+    -fx-background-color: #219a52;
+}
+
+/* ==================== Password Toggle Button ==================== */
+
+.password-toggle {
+    -fx-background-color: transparent;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 5;
+}
+
+.password-toggle:hover {
+    -fx-text-fill: #2d3e50;
+}
+
+.password-container {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 5;
+}
